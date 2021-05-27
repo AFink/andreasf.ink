@@ -20,80 +20,96 @@
         "copyright": "Andreas Fink",
         "replyto": "andreas@andreasfink.xyz",
         "navbar": [
-			{
-				"name": "E-Mail",
-				"href": "mailto:andreas@andreasfink.xyz",
-				"icon": "far fa-envelope"
-			}, {
-				"name": "GitHub",
-				"href": "https://github.com/AFink",
-				"icon": "fab fa-github"
-			}, {
-				"name": "Spotify",
-				"href": "https://open.spotify.com/user/finki70",
-				"icon": "fab fa-spotify"
-			}, {
-				"name": "Instagram",
-				"href": "https://www.instagram.com/xndrxxs_fxnk/",
-				"icon": "fab fa-instagram"
-			}, {
-				"name": "Discord",
-				"href": "https://discord.gg/wgnP5wS",
-				"icon": "fab fa-discord"
-			}, {
-				"name": "Twitter",
-				"href": "https://twitter.com/xndrxxs_fxnk",
-				"icon": "fab fa-twitter"
-			}, {
-				"name": "Steam",
-				"href": "http://steamcommunity.com/id/realpantha/",
-				"icon": "fab fa-steam"
-			}, {
-				"name": "Tellonym",
-				"href": "https://tellonym.me/xndrxxsfxnk",
-				"icon": "fas fa-user-secret"
-			}, {
-				"name": "Docker",
-				"href": "https://hub.docker.com/u/finki70",
-				"icon": "fab fa-docker"
-			}, {
-				"name": "Last.fm",
-				"href": "https://www.last.fm/de/user/finki70",
-				"icon": "fab fa-lastfm"
-			}, {
-				"name": "Twitch",
-				"href": "https://www.twitch.tv/realpanther_",
-				"icon": "fab fa-twitch"
-			}, {
-				"name": "YouTube",
-				"href": "https://www.youtube.com/channel/UC1V09EbSXPIWCiSRup9Lccw",
-				"icon": "fab fa-youtube"
-			}, {
-				"name": "Reddit",
-				"href": "https://www.reddit.com/u/RealPanther_",
-				"icon": "fab fa-reddit"
-			}, {
-				"name": "TeamSpeak",
-				"href": "ts3server://ts.syslul.de",
-				"icon": "fab fa-teamspeak"
-			}, {
-				"name": "Telegram",
-				"href": "https://t.me/finki70",
-				"icon": "fab fa-telegram"
-			}, {
-				"name": "Keybase",
-				"href": "https://keybase.io/finki70",
-				"icon": "fab fa-keybase"
-			}
-		],
+		{
+			"name": "E-Mail",
+			"href": "mailto:andreas@andreasfink.xyz",
+			"icon": "far fa-envelope"
+		},
+		{
+			"name": "GitHub",
+			"href": "https://github.com/AFink",
+			"icon": "fab fa-github"
+		},
+		{
+			"name": "Spotify",
+			"href": "https://open.spotify.com/user/finki70",
+			"icon": "fab fa-spotify"
+		},
+		{
+			"name": "Instagram",
+			"href": "https://www.instagram.com/xndrxxs_fxnk/",
+			"icon": "fab fa-instagram"
+		},
+		{
+			"name": "Discord",
+			"href": "https://discord.gg/wgnP5wS",
+			"icon": "fab fa-discord"
+		},
+		{
+			"name": "Twitter",
+			"href": "https://twitter.com/xndrxxs_fxnk",
+			"icon": "fab fa-twitter"
+		},
+		{
+			"name": "Steam",
+			"href": "http://steamcommunity.com/id/realpantha/",
+			"icon": "fab fa-steam"
+		},
+		{
+			"name": "Tellonym",
+			"href": "https://tellonym.me/xndrxxsfxnk",
+			"icon": "fas fa-user-secret"
+		},
+		{
+			"name": "Docker",
+			"href": "https://hub.docker.com/u/finki70",
+			"icon": "fab fa-docker"
+		},
+		{
+			"name": "Last.fm",
+			"href": "https://www.last.fm/de/user/finki70",
+			"icon": "fab fa-lastfm"
+		},
+		{
+			"name": "Twitch",
+			"href": "https://www.twitch.tv/realpanther_",
+			"icon": "fab fa-twitch"
+		},
+		{
+			"name": "YouTube",
+			"href": "https://www.youtube.com/channel/UC1V09EbSXPIWCiSRup9Lccw",
+			"icon": "fab fa-youtube"
+		},
+		{
+			"name": "Reddit",
+			"href": "https://www.reddit.com/u/RealPanther_",
+			"icon": "fab fa-reddit"
+		},
+		{
+			"name": "TeamSpeak",
+			"href": "ts3server://ts.syslul.de",
+			"icon": "fab fa-teamspeak"
+		},
+		{
+			"name": "Telegram",
+			"href": "https://t.me/finki70",
+			"icon": "fab fa-telegram"
+		},
+		{
+			"name": "Keybase",
+			"href": "https://keybase.io/finki70",
+			"icon": "fab fa-keybase"
+		}
+	],
         "footer": [
-			{
-				"name": "Impressum",
-				"href": "//static.syslul.de/impressum/"
-			}, {
-				"name": "Datenschutz",
-				"href": "//static.syslul.de/datenschutz/"
-			}
-		]
+		{
+			"name": "Impressum",
+			"href": "//static.syslul.de/impressum/"
+		},
+		{
+			"name": "Datenschutz",
+			"href": "//static.syslul.de/datenschutz/"
+		}
+	]
     }
 }
