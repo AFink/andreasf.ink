@@ -1,0 +1,186 @@
+//Override Bootstrap's Sass default variables
+//
+//Nearly all variables in Bootstrap are written with the `!default` flag.
+//This allows you to override the default values of those variables before
+//you import Bootstrap's source Sass files.
+//
+//Overriding the default variable values is the best way to customize your
+//CSS without writing _new_ styles. For example, change you can either change
+//`$body-color` or write more CSS that override's Bootstrap's CSS like so:
+//`body { color: red; }`.
+
+
+@import "bootstrap/scss/bootstrap";
+//@import "bootstrap/scss/functions"; //Required
+//@import "bootstrap/scss/variables"; //Required
+//@import "bootstrap/scss/mixins"; //Required
+
+//@import "bootstrap/scss/root"; //Required
+//@import "bootstrap/scss/reboot"; //Required
+//@import "bootstrap/scss/type";
+//@import "bootstrap/scss/images";
+//@import "bootstrap/scss/code";
+//@import "bootstrap/scss/grid";
+//@import "bootstrap/scss/tables";
+//@import "bootstrap/scss/forms";
+//@import "bootstrap/scss/buttons";
+//@import "bootstrap/scss/transitions";
+//@import "bootstrap/scss/dropdown";
+//@import "bootstrap/scss/button-group";
+//@import "bootstrap/scss/input-group";
+//@import "bootstrap/scss/custom-forms";
+//@import "bootstrap/scss/nav";
+//@import "bootstrap/scss/navbar";
+//@import "bootstrap/scss/card";
+//@import "bootstrap/scss/breadcrumb";
+//@import "bootstrap/scss/pagination";
+//@import "bootstrap/scss/badge";
+//@import "bootstrap/scss/jumbotron";
+//@import "bootstrap/scss/alert";
+//@import "bootstrap/scss/progress";
+//@import "bootstrap/scss/media";
+//@import "bootstrap/scss/list-group";
+//@import "bootstrap/scss/close";
+//@import "bootstrap/scss/toasts";
+//@import "bootstrap/scss/modal"; 
+//@import "bootstrap/scss/tooltip";
+//@import "bootstrap/scss/popover";
+//@import "bootstrap/scss/carousel";
+//@import "bootstrap/scss/spinners";
+//@import "bootstrap/scss/utilities";
+//@import "bootstrap/scss/print";
+
+//
+//Custom styles
+//
+
+/* strait-regular - latin */
+@font-face {
+    font-family: 'Strait';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/strait-v7-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local('Strait'), local('Strait-Regular'),
+        url('../fonts/strait-v7-latin-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/strait-v7-latin-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/strait-v7-latin-regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/strait-v7-latin-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/strait-v7-latin-regular.svg#Strait') format('svg');
+    /* Legacy iOS */
+}
+
+
+body {
+    font-family: 'Strait', sans-serif;
+    background-color: #0b0a15;
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
+    /* Standard */
+}
+
+@media (min-width: 992px) {
+    .navbar .container {
+        max-width: 1260px !important;
+    }
+}
+
+.navbar p {
+    display: inline-block;
+    margin: 0;
+    line-height: 21px;
+    font-weight: inherit;
+    font-size: inherit;
+    margin-left: 0.5rem;
+}
+
+.navbar {
+    z-index: 10;
+    -webkit-transition: background 0.5s ease;
+    -moz-transition: background 0.5s ease;
+    -ms-transition: background 0.5s ease;
+    -o-transition: background 0.5s ease;
+    transition: background 0.5s ease;
+    background: none;
+}
+
+.navbar.open {
+    background-color: #0b0a15;
+}
+
+.nav-item {
+    text-transform: uppercase;
+    font-size: 0.7142em;
+    padding: 0.3rem 0.5rem;
+    line-height: 1.625rem;
+}
+
+.navbar .navbar-nav .nav-link:not(.btn) {
+    font-size: 18px;
+    position: relative;
+    top: 3px;
+    text-align: center;
+    width: 21px;
+}
+
+.navbar a {
+    display: inline;
+}
+
+.logo {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 30%;
+    max-width: 70%;
+}
+
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: rgba(255, 255, 255, .5);
+    text-align: center;
+}
+
+footer a {
+    -moz-transition: color 0.2s ease,
+        background-color 0.2s ease,
+        border-bottom-color 0.2s ease;
+    -webkit-transition: color 0.2s ease,
+        background-color 0.2s ease,
+        border-bottom-color 0.2s ease;
+    -ms-transition: color 0.2s ease,
+        background-color 0.2s ease,
+        border-bottom-color 0.2s ease;
+    transition: color 0.2s ease,
+        background-color 0.2s ease,
+        border-bottom-color 0.2s ease;
+    border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    color: inherit;
+}
+
+footer a:hover {
+    border-bottom-color: transparent;
+    color: inherit;
+    text-decoration: none;
+}

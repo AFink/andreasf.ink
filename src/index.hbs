@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="{{config.lang}}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta http-equiv="content-Type" content="text/html; utf-8" />
+    <meta http-equiv="Pragma" content="cache" />
+    <meta http-equiv="content-Language" content="{{config.lang}}" />
+    <meta http-equiv="Reply-to" content="{{config.replyto}}" />
+
+    <meta property="og:image" content="/img/logo_preview.png" />
+
+    <title>{{config.title}}</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/img/brand.png" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+                {{config.brand}}
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse"
+                aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    {{#each config.navbar}}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{this.href}}" target="_blank">
+                                <i class="{{this.icon}}"></i>
+                                <p class="d-lg-none">{{this.name}}</p>
+                            </a>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="particles-js"></div>
+
+    <div class="container">
+        <img class="logo" src="/img/logo_full.png" alt="">
+    </div>
+
+    <footer>
+        <p class="copyright"><span style="font-family: none;">&copy</span><script>document.write(new Date().getFullYear())</script>&nbsp;{{config.copyright}}
+            {{#each config.footer}}
+                | <a href="{{this.href}}" target="_blank">{{this.name}}</a>
+            {{/each}}
+        </p>
+    </footer>
+</body>
+</html>
