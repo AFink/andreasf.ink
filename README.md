@@ -20,7 +20,7 @@ Build the application.
   npm run prod
 ```
 
-Now, the finished files will be availlable in `/dist/`
+Now, the finished files will be availlable in `/public/`
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
