@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4954 2194" width="4954" height="2194">
+	<defs>
+		<linearGradient id="grd1" gradientUnits="userSpaceOnUse"  x1="4954.04" y1="0" x2="0" y2="2194">
+			<stop offset="0" stop-color="#26cbfe"  />
+			<stop offset="1" stop-color="#0a7fee"  />
+		</linearGradient>
+		<linearGradient id="grd2" gradientUnits="userSpaceOnUse"  x1="3323.19" y1="934.5" x2="3323.19" y2="1868.5">
+			<stop offset="0" stop-color="#fefefe"  />
+			<stop offset="1" stop-color="#819ab3"  />
+		</linearGradient>
+		<linearGradient id="grd3" gradientUnits="userSpaceOnUse"  x1="3323.574" y1="884.5" x2="3323.574" y2="1918.5">
+			<stop offset="0" stop-color="#819ab3"  />
+			<stop offset="1" stop-color="#fefefe"  />
+		</linearGradient>
+		<linearGradient id="grd4" gradientUnits="userSpaceOnUse"  x1="2236.49" y1="506.5" x2="4723948.645" y2="506.5">
+			<stop offset="0" stop-color="#26cbfe"  />
+			<stop offset="1" stop-color="#0a7fee"  />
+		</linearGradient>
+		<linearGradient id="grd5" gradientUnits="userSpaceOnUse"  x1="4494.64" y1="483.3" x2="2161.15" y2="492.116">
+			<stop offset="0" stop-color="#0a7fee"  />
+			<stop offset="1" stop-color="#26cbfe"  />
+		</linearGradient>
+		<linearGradient id="grd6" gradientUnits="userSpaceOnUse"  x1="1523.12" y1="324.5" x2="1523.12" y2="1868.5">
+			<stop offset="0" stop-color="#fefefe"  />
+			<stop offset="1" stop-color="#819ab3"  />
+		</linearGradient>
+		<linearGradient id="grd7" gradientUnits="userSpaceOnUse"  x1="1522.36" y1="274.5" x2="1522.36" y2="1918.5">
+			<stop offset="0" stop-color="#819ab3"  />
+			<stop offset="1" stop-color="#fefefe"  />
+		</linearGradient>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #171d2b } 
+		.shp1 { fill: url(#grd1) } 
+		.shp2 { fill: url(#grd2) } 
+		.shp3 { fill: url(#grd3) } 
+		.shp4 { fill: url(#grd4) } 
+		.shp5 { fill: url(#grd5) } 
+		.shp6 { fill: url(#grd6) } 
+		.shp7 { fill: url(#grd7) } 
+	</style>
+	<g id="_1">
+		<g id="Shape_1">
+			<path id="Pfad_1" class="shp0" d="M3656.24 2156.5L2000.39 2156.5L1990.71 2133.62L1796.39 1674.5L1257.14 1674.5L1063.8 2133.56L1054.14 2156.5L57.62 2156.5L80.95 2103.82L419.82 1338.67L273.03 937.9L254.57 887.5L607.48 887.5L960.75 60.27L970.48 37.5L4895.64 37.5L4871.34 90.61L4178.34 1604.61L4168.34 1626.5L3513.24 1626.5L3643.44 2109.23L3656.24 2156.5Z" />
+			<path id="Pfad_2" fill-rule="evenodd" class="shp1" d="M3705.14 2194L1975.54 2194L1956.17 2148.23L1771.54 1712L1282.03 1712L1098.36 2148.11L1079.03 2194L0 2194L46.66 2088.63L379.39 1337.34L237.82 950.8L200.9 850L582.72 850L926.27 45.55L945.72 0L4954.04 0L4905.44 106.21L4212.44 1620.21L4192.44 1664L3562.14 1664L3679.64 2099.46L3705.14 2194ZM3607.24 2119L3464.24 1589L4144.24 1589L4837.24 75L995.24 75L632.24 925L308.24 925L460.24 1340L115.24 2119L1029.24 2119L1232.24 1637L1821.24 1637L2025.24 2119L3607.24 2119Z" />
+		</g>
+		<g id="Gruppe_1">
+			<g id="Form_1">
+				<path id="Pfad_3" class="shp2" d="M3280.84 1868.5L2885.34 1868.5L2492.34 934.5L4154.04 934.5L3978.94 1339.74L3046.64 1339.74L3023.84 1434.26L3186.04 1517.19L3280.84 1868.5Z" />
+				<path id="Pfad_4" fill-rule="evenodd" class="shp3" d="M3346.14 1918.5L2852.14 1918.5L2417.01 884.5L4230.14 884.5L4011.74 1389.74L3046.64 1389.74L3228.54 1482.76L3346.14 1918.5ZM3946.04 1289.74L4077.94 984.5L2567.54 984.5L2696.04 1289.74L3946.04 1289.74ZM3215.54 1818.5L3143.54 1551.61L3001.04 1478.78L2713.74 1331.87L2918.54 1818.5L3215.54 1818.5Z" />
+			</g>
+			<g id="Form_2">
+				<path id="Pfad_5" class="shp4" d="M4206.14 688.5L2389.94 688.5L2236.49 324.5L4409.44 324.5L4206.14 688.5Z" />
+				<path id="Pfad_6" fill-rule="evenodd" class="shp5" d="M2161.15 274.5L4494.64 274.5L4235.54 738.5L2356.76 738.5L2161.15 274.5ZM2311.83 374.5L2423.13 638.5L4176.84 638.5L4324.24 374.5L2311.83 374.5Z" />
+			</g>
+		</g>
+		<g id="Form_3">
+			<path id="Pfad_7" class="shp6" d="M2546.64 1868.5L2190.97 1868.5L1698.9 709.95L1685.97 679.5L1378.36 679.5L1365.17 709.23L1188.18 1108.22L1157 1178.5L1563.87 1178.5L1653.15 1387.5L1066.71 1387.5L1053.82 1418.06L863.71 1868.5L499.6 1868.5L720.62 1367.69L728.75 1349.27L721.85 1330.36L665.35 1175.5L797.91 1175.5L810.87 1145.12L1160.91 324.5L1897.66 324.5L2546.64 1868.5Z" />
+			<path id="Pfad_8" fill-rule="evenodd" class="shp7" d="M2621.84 1918.5L2157.88 1918.5L1652.88 729.5L1410.88 729.5L1233.88 1128.5L1596.88 1128.5L1728.88 1437.5L1099.88 1437.5L896.88 1918.5L422.88 1918.5L674.88 1347.5L593.88 1125.5L764.88 1125.5L1127.88 274.5L1930.88 274.5L2621.84 1918.5ZM2471.34 1818.5L1864.44 374.5L1193.94 374.5L856.86 1164.74L830.94 1225.5L736.81 1225.5L768.82 1313.23L782.62 1351.04L766.37 1387.88L576.32 1818.5L830.54 1818.5L1007.75 1398.62L1033.54 1337.5L1577.42 1337.5L1530.86 1228.5L1080.12 1228.5L1142.47 1087.95L1319.47 688.95L1345.84 629.5L1719.05 629.5L1744.92 690.41L2224.05 1818.5L2471.34 1818.5Z" />
+		</g>
+	</g>
+</svg>

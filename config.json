@@ -16,13 +16,13 @@
     "custom": {
         "lang": "de",
         "title": "Home - Andreas Fink",
-        "brand": "AndreasFink.XYZ",
+        "brand": "AndreasF.ink",
         "copyright": "Andreas Fink",
-        "replyto": "andreas@andreasfink.xyz",
+        "replyto": "mail@andreasf.ink",
         "navbar": [
 		{
 			"name": "E-Mail",
-			"href": "mailto:andreas@andreasfink.xyz",
+			"href": "mailto:mail@andreasf.ink",
 			"icon": "far fa-envelope"
 		},
 		{

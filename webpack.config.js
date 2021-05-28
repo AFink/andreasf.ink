@@ -30,7 +30,7 @@ const config = {
             }],
         }),
         new FaviconsWebpackPlugin({
-            logo: './src/img/brand.png',
+            logo: './src/img/brand.svg',
             favicons: {
                 theme_color: '#0b0a15',
             }
