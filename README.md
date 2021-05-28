@@ -1,10 +1,10 @@
-# andreasfink.xyz
+# andreasf.ink
 
 My personal website uploaded on GitHub to host yourself.
 
 ## Demo
 
-[Demo](https://andreasfink-xyz.vercel.app/)
+[Demo](https://andreasf-ink.vercel.app/)
   
 ## Installation
 
