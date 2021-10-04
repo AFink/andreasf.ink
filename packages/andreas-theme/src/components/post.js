@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { connect, styled } from "frontity";
-import Link from "./link";
+import Container from 'react-bootstrap/Container';
+import Link from "@frontity/components/link";
 import List from "./list";
 import FeaturedMedia from "./featured-media";
 
@@ -92,12 +93,6 @@ const Post = ({ state, actions, libraries }) => {
 };
 
 export default connect(Post);
-
-const Container = styled.div`
-  width: 800px;
-  margin: 0;
-  padding: 24px;
-`;
 
 const Title = styled.h1`
   margin: 0;

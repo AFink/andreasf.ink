@@ -3,6 +3,61 @@ import image from "@frontity/html2react/processors/image";
 import iframe from "@frontity/html2react/processors/iframe";
 import link from "@frontity/html2react/processors/link";
 
+const allCategoriesHandler = {
+  name: "allCategories",
+  priority: 10,
+  pattern: "all-categories",
+  func: async ({ route, params, state, libraries }) => {
+    const { api } = libraries.source;
+
+    // 1. fetch the data you want from the endpoint page
+    const response = await api.get({
+      endpoint: "categories",
+      params: {
+        per_page: 100, // To make sure you get all of them
+        exclude: 1
+      }
+    });
+
+    // 2. get an array with each item in json format
+    const items = await response.json();
+
+    // 3. add data to source
+    const currentPageData = state.source.data[route];
+
+    Object.assign(currentPageData, {
+      items
+    });
+  }
+};
+
+const threePostsHandler = {
+  name: "threePosts",
+  priority: 10,
+  pattern: "three-posts",
+  func: async ({ route, params, state, libraries }) => {
+    const { api } = libraries.source;
+
+    // 1. fetch the data you want from the endpoint page
+    const response = await api.get({
+      endpoint: "posts",
+      params: {
+        per_page: 3,
+      }
+    });
+    // 2. get an array with each item in json format
+    const items = await response.json();
+
+    // 3. add data to source
+    const currentPageData = state.source.data[route];
+
+    Object.assign(currentPageData, {
+      items
+    });
+  }
+};
+
+
 const marsTheme = {
   name: "@frontity/mars-theme",
   roots: {
@@ -20,7 +75,6 @@ const marsTheme = {
     theme: {
       autoPrefetch: "in-view",
       menu: [],
-      isMobileMenuOpen: false,
       featured: {
         showOnList: false,
         showOnPost: false,
@@ -34,11 +88,14 @@ const marsTheme = {
    */
   actions: {
     theme: {
-      toggleMobileMenu: ({ state }) => {
-        state.theme.isMobileMenuOpen = !state.theme.isMobileMenuOpen;
-      },
-      closeMobileMenu: ({ state }) => {
-        state.theme.isMobileMenuOpen = false;
+      beforeSSR: async ({ state, actions, libraries }) => {
+        //fetch only for home page
+        if (state.router.link == "/") {
+          await actions.source.fetch("/projects/");
+          await actions.source.fetch("three-posts");
+          await actions.source.fetch("/services/");
+          await actions.source.fetch("all-categories")
+        }
       },
     },
   },
@@ -51,6 +108,9 @@ const marsTheme = {
        */
       processors: [image, iframe, link],
     },
+    source: {
+      handlers: [allCategoriesHandler, threePostsHandler]
+    }
   },
 };
 
