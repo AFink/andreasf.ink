@@ -1,0 +1,26 @@
+{
+  "name": "andreasf-ink",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Private homepage",
+  "keywords": [],
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "scripts": {
+    "dev": "frontity dev",
+    "build": "frontity build",
+    "serve": "frontity serve"
+  },
+  "prettier": {},
+  "dependencies": {
+    "@frontity/core": "^1.14.3",
+    "@frontity/head-tags": "^1.1.1",
+    "@frontity/html2react": "^1.7.0",
+    "@frontity/tiny-router": "^1.4.4",
+    "@frontity/wp-source": "^1.11.6",
+    "andreas-theme": "./packages/andreas-theme",
+    "frontity": "^1.17.1"
+  }
+}
