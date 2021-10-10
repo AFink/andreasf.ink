@@ -1,5 +1,6 @@
 import { connect, styled } from "frontity";
 import Header from "./header";
+import Posts from "./posts";
 import Services from "./services";
 
 const Home = ({ state, actions }) => {
@@ -7,6 +8,7 @@ const Home = ({ state, actions }) => {
         <div id="home">
             <Header />
             <Services />
+            <Posts />
         </div>
     );
 };

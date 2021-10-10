@@ -1,6 +1,7 @@
 const settings = {
   "name": "andreasf-ink",
   "state": {
+    "currentLang": 'en',
     "frontity": {
       "url": "https://andreasf-ink.afink.dev/",
       "title": "Test Frontity Blog",

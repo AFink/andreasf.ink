@@ -86,8 +86,15 @@ const marsTheme = {
           services: {
             title: "Services",
           },
+          posts: {
+            title: "Posts",
+          },
         },
-      },
+        list: {
+          blog: "Blog",
+          author: "Author",
+        },
+      }
     }
   },
 

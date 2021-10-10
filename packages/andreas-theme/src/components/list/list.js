@@ -1,50 +1,56 @@
-import { connect, styled, decode } from "frontity";
+import { connect, decode } from "frontity";
+
+import Col from "react-bootstrap/Col";
+import Container from 'react-bootstrap/Container';
+import Row from "react-bootstrap/Row";
+
+import { jsUcfirst } from "@finki70/shufflejs-react/lib/Utils";
 import Item from "./list-item";
 import Pagination from "./pagination";
 
 const List = ({ state }) => {
-  // Get the data of the current list.
   const data = state.source.get(state.router.link);
-
   return (
-    <Container>
-      {/* If the list is a taxonomy, we render a title. */}
-      {data.isTaxonomy && (
-        <Header>
-          {data.taxonomy}:{" "}
-          <b>{decode(state.source[data.taxonomy][data.id].name)}</b>
-        </Header>
-      )}
+    <div>
+      <div id="header" className="bg-primary mb-0">
+        <Container className="col-xxl-8 px-4 py-5 text-secondary text-center">
+          <Row className="flex-lg-row-reverse align-items-center g-5 py-5">
+            <Col className="">
+              <h1 className="display-5 fw-bold lh-1 mb-3 text-white">
+                {data.isTaxonomy && (
+                  <>
+                    {jsUcfirst(data.taxonomy)}:{" "}
+                    <b>{decode(state.source[data.taxonomy][data.id].name)}</b>
+                  </>
+                )}
 
-      {/* If the list is for a specific author, we render a title. */}
-      {data.isAuthor && (
-        <Header>
-          Author: <b>{decode(state.source.author[data.id].name)}</b>
-        </Header>
-      )}
+                {data.isAuthor && (
+                  <>
+                    {state.lang[state.currentLang].list.author}: <b>{decode(state.source.author[data.id].name)}</b>
+                  </>
+                )}
 
-      {/* Iterate over the items of the list. */}
-      {data.items.map(({ type, id }) => {
-        const item = state.source[type][id];
-        // Render one Item component for each one.
-        return <Item key={item.id} item={item} />;
-      })}
-      <Pagination />
-    </Container>
+                {(!data.isTaxonomy && !data.isAuthor) && (
+                  <>
+                   {state.lang[state.currentLang].list.blog}
+                  </>
+                )}
+              </h1>
+            </Col>
+          </Row>
+        </Container >
+      </div>
+      <Container id="post-list">
+        <Row className="g-5 mt-0 justify-content-center">
+          {data.items.map(({ type, id }) => {
+            const item = state.source[type][id];
+            return <Item key={item.id} item={item} />;
+          })}
+        </Row>
+        <Pagination />
+      </Container>
+    </div>
   );
 };
 
 export default connect(List);
-
-const Container = styled.section`
-  width: 800px;
-  margin: 0;
-  padding: 24px;
-  list-style: none;
-`;
-
-const Header = styled.h3`
-  font-weight: 300;
-  text-transform: capitalize;
-  color: rgba(12, 17, 43, 0.9);
-`;
