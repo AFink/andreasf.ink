@@ -83,6 +83,9 @@ const marsTheme = {
     lang: {
       en: {
         home: {
+          services: {
+            title: "Services",
+          },
           posts: {
             title: "Posts",
           },
