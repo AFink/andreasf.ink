@@ -80,6 +80,28 @@ const marsTheme = {
         showOnPost: false,
       },
     },
+    lang: {
+      en: {
+        home: {
+          contact: {
+            title: "Contact",
+            subtitle: "Get in touch!",
+            subsubtitle: "Just fill in the form and send me a mail.",
+            form: {
+              name: "Name",
+              email: "Email address",
+              subject: "Subject",
+              message: "Message",
+              submit: "Submit",
+            },
+            success: {
+              title: "Success!",
+              text: "The mail has been sent.",
+            },
+          },
+        }
+      }
+    }
   },
 
   /**
