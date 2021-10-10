@@ -80,6 +80,15 @@ const marsTheme = {
         showOnPost: false,
       },
     },
+    lang: {
+      en: {
+        home: {
+          services: {
+            title: "Services",
+          },
+        },
+      },
+    }
   },
 
   /**
