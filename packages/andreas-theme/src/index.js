@@ -99,7 +99,17 @@ const marsTheme = {
               text: "The mail has been sent.",
             },
           },
-        }
+          services: {
+            title: "Services",
+          },
+          posts: {
+            title: "Posts",
+          },
+        },
+        list: {
+          blog: "Blog",
+          author: "Author",
+        },
       }
     }
   },
