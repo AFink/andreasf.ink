@@ -26,6 +26,7 @@
     "frontity": "^1.17.1",
     "moment": "^2.29.1",
     "react-bootstrap": "^2.0.0-rc.0",
+    "react-git-info": "^2.0.0",
     "sweetalert2": "^11.1.7",
     "sweetalert2-react-content": "^4.1.1"
   }

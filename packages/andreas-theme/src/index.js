@@ -126,6 +126,11 @@ const marsTheme = {
               text: "The mail has been sent.",
             },
           },
+        },
+        footer: {
+          copyright: "Copyright",
+          rightsreserved: "All rights reserved.",
+          copyrightholder: "Andreas Fink"
         }
       }
     }

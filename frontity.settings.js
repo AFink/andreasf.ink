@@ -29,6 +29,16 @@ const settings = {
               "/blog/"
             ]
           ],
+          "footermenu": [
+            [
+              "Imprint",
+              "/imprint/"
+            ],
+            [
+              "Privacy",
+              "/privacy/"
+            ],
+          ],
           "featured": {
             "showOnList": false,
             "showOnPost": false
