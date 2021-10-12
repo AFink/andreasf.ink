@@ -1,6 +1,9 @@
 const settings = {
   "name": "andreasf-ink",
   "state": {
+    "contactform": {
+      id: 72,
+    },
     "currentLang": 'en',
     "frontity": {
       "url": "https://andreasf-ink.afink.dev/",

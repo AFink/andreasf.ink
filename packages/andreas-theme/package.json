@@ -19,6 +19,8 @@
     "@finki70/shufflejs-react": "^0.2.6",
     "@frontity/components": "^1.8.1",
     "@frontity/html2react": "^1.6.1",
-    "frontity": "^1.17.0"
+    "frontity": "^1.17.0",
+    "sweetalert2": "^11.1.7",
+    "sweetalert2-react-content": "^4.1.1"
   }
 }
