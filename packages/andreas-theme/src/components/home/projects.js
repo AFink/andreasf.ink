@@ -46,7 +46,6 @@ const Projects = ({ state, actions }) => {
         "Body Types": {
         },
     }
-    console.log([...new Set(usedcats)]);
 
     items.filter(c => [...new Set(usedcats)].includes(c.id)).map(c => {
         cats['Body Types'][String(c.name)] = {

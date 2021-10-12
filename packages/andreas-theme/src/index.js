@@ -127,6 +127,10 @@ const marsTheme = {
             },
           },
         },
+        list:{
+          author: "Author",
+          blog: "Blog",
+        },
         footer: {
           copyright: "Copyright",
           rightsreserved: "All rights reserved.",
