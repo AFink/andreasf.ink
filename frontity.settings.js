@@ -16,6 +16,9 @@ const settings = {
       "name": "andreas-theme",
       "state": {
         "theme": {
+          "menu-brand": {
+            "link": "/",
+          },
           "menu": [
             [
               "Home",

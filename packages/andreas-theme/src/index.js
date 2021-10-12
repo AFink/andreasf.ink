@@ -42,6 +42,7 @@ const threePostsHandler = {
     const response = await api.get({
       endpoint: "posts",
       params: {
+        ...state.params,
         per_page: 3,
       }
     });
@@ -75,14 +76,39 @@ const marsTheme = {
     theme: {
       autoPrefetch: "in-view",
       menu: [],
-      featured: {
-        showOnList: false,
-        showOnPost: false,
-      },
     },
     lang: {
       en: {
+        navbar: {
+          brand: "Andreas Fink EN",
+        },
         home: {
+          header: {
+            title: "Andreas Fink",
+            subtitles: [
+              "Frontend-Entwickler", "Schüler", "Wordpress-Entwickler", "NodeJs-Entwickler",
+            ],
+            buttons: [
+              {
+                title: "uwu",
+                link: "",
+              },
+              {
+                title: "owo",
+                link: "",
+              },
+            ]
+          },
+          posts: {
+            title: "Posts",
+          },
+          projects: {
+            title: "Projects",
+            all: "All"
+          },
+          services: {
+            title: "Services",
+          },
           contact: {
             title: "Contact",
             subtitle: "Get in touch!",
@@ -93,23 +119,14 @@ const marsTheme = {
               subject: "Subject",
               message: "Message",
               submit: "Submit",
+              dsgvo: "I allow the website, according to the privacy policy, to handle and store my filled in data."
             },
             success: {
               title: "Success!",
               text: "The mail has been sent.",
             },
           },
-          services: {
-            title: "Services",
-          },
-          posts: {
-            title: "Posts",
-          },
-        },
-        list: {
-          blog: "Blog",
-          author: "Author",
-        },
+        }
       }
     }
   },
@@ -126,8 +143,8 @@ const marsTheme = {
           await actions.source.fetch("/projects/");
           await actions.source.fetch("three-posts");
           await actions.source.fetch("/services/");
-          await actions.source.fetch("all-categories")
         }
+        await actions.source.fetch("all-categories");
       },
     },
   },

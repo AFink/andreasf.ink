@@ -40,7 +40,6 @@ body, html, #root {
 #home .project{
     color:white;
     /*border-radius: 26px;*/
-    padding: 40px 38px 45px;
     background-size: cover;
     background-position: center;
     -webkit-transition: opacity 0.3s ease-in-out;
@@ -56,15 +55,18 @@ body, html, #root {
 
 #home .project .details{
     opacity: 0;
-    -webkit-transition: opacity 0.3s ease-in-out;
-    -moz-transition: opacity 0.3s ease-in-out;
-    -ms-transition: opacity 0.3s ease-in-out;
-    -o-transition: opacity 0.3s ease-in-out;
-    transition: opacity 0.3s ease-in-out;
+    -webkit-transition: opacity 0.4s ease-in-out;
+    -moz-transition: opacity 0.4s ease-in-out;
+    -ms-transition: opacity 0.4s ease-in-out;
+    -o-transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
+    padding: 40px 38px 45px;
 }
 
 #home .project:hover .details{
     opacity: 1;
+    --bs-bg-opacity: 0.5;
+    background-color: rgba(var(--bs-primary-rgb),var(--bs-bg-opacity))!important;
 }
 
 @media (max-width: 768px) {
@@ -74,6 +76,8 @@ body, html, #root {
     }
     #home .project .details{
         opacity: 1;
+        --bs-bg-opacity: 0.5;
+        background-color: rgba(var(--bs-primary-rgb),var(--bs-bg-opacity))!important;
     }
 }
 
@@ -120,8 +124,6 @@ body, html, #root {
   :root{
       --bs-primary-rgb: 17, 29, 74;
       --bs-info-rgb: 22, 118, 185;
-
-     
   }
 
   img {
@@ -129,12 +131,21 @@ body, html, #root {
     height: auto;
 }
 
-#home .post-image img{
+.post .post-image img{
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
-#home .post .details{
+.post .details{
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: rgb(var(--bs-primary-rgb));
+}
+
+.nav-pills .nav-link{
+    color: rgb(var(--bs-primary-rgb));
 }
