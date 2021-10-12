@@ -4,6 +4,7 @@ const settings = {
     "contactform": {
       id: 72,
     },
+    "currentLang": 'en',
     "frontity": {
       "url": "https://andreasf-ink.afink.dev/",
       "title": "Test Frontity Blog",

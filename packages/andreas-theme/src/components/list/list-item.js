@@ -1,83 +1,45 @@
-import { connect, styled } from "frontity";
+import { connect } from "frontity";
 import Link from "@frontity/components/link";
-import FeaturedMedia from "../featured-media";
 
-/**
- * Item Component
- *
- * It renders the preview of a blog post. Each blog post contains
- * - Title: clickable title of the post
- * - Author: name of author and published date
- * - FeaturedMedia: the featured image/video of the post
- */
-const Item = ({ state, item }) => {
-  const author = state.source.author[item.author];
-  const date = new Date(item.date);
+import Col from "react-bootstrap/Col";
+
+import FeaturedMedia from "../featured-media";
+import { jsUcfirst } from "@finki70/shufflejs-react/lib/Utils";
+import moment from "moment";
+
+const Item = ({ state, item, libraries, showExcerpt = true, showCategories = true }) => {
+  const Html2React = libraries.html2react.Component;
+
+  const { items } = state.source.data["all-categories/"];
+
+  item.categoryHelper = [];
+  try {
+    item.categoryHelper = item.categories.map(c => items.find(i => i.id == c) ? items.find(i => i.id == c) : null).filter(x => x);
+  } catch (error) {
+    console.log(error);
+  }
 
   return (
-    <article>
-      <Link link={item.link}>
-        <Title dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
+    <Col md={4}>
+      <Link link={item.link} className="post rounded text-decoration-none text-white-50 text-center hvr-float w-100 h-100 d-flex flex-column flex-wrap">
+        <div className="post-image">
+          <FeaturedMedia id={item.featured_media} margin={false} />
+        </div>
+        <div className="details p-4 pt-3 bg-primary d-flex flex-column flex-grow-1">
+          {showCategories ? <ul className="list-inline mb-0 mb-2">
+            {item.categoryHelper.map(c => {
+              return (
+               <li key={c.id} className="list-inline-item"><span className="badge badge-warning"><Link link={c.link} className="text-decoration-none text-white-50">{jsUcfirst(c.name)}</Link></span></li>
+              );
+            })}
+          </ul> : null }
+          <h2 className="text-light" dangerouslySetInnerHTML={{ __html: item.title.rendered }}></h2>
+          {showExcerpt ? <div className="excerpt mb-auto"><Html2React html={item.excerpt.rendered} /></div> : null }
+          <span>{moment(item.date).format('LL')}</span>
+        </div>
       </Link>
-
-      <div>
-        {/* If the post has an author, we render a clickable author text. */}
-        {author && (
-          <StyledLink link={author.link}>
-            <AuthorName>
-              By <b>{author.name}</b>
-            </AuthorName>
-          </StyledLink>
-        )}
-        <PublishDate>
-          {" "}
-          on <b>{date.toDateString()}</b>
-        </PublishDate>
-      </div>
-
-      {/*
-       * If the want to show featured media in the
-       * list of featured posts, we render the media.
-       */}
-      {state.theme.featured.showOnList && (
-        <FeaturedMedia id={item.featured_media} />
-      )}
-
-      {/* If the post has an excerpt (short summary text), we render it */}
-      {item.excerpt && (
-        <Excerpt dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }} />
-      )}
-    </article>
+    </Col>
   );
 };
 
-// Connect the Item to gain access to `state` as a prop
 export default connect(Item);
-
-const Title = styled.h1`
-  font-size: 2rem;
-  color: rgba(12, 17, 43);
-  margin: 0;
-  padding-top: 24px;
-  padding-bottom: 8px;
-  box-sizing: border-box;
-`;
-
-const AuthorName = styled.span`
-  color: rgba(12, 17, 43, 0.9);
-  font-size: 0.9em;
-`;
-
-const StyledLink = styled(Link)`
-  padding: 15px 0;
-`;
-
-const PublishDate = styled.span`
-  color: rgba(12, 17, 43, 0.9);
-  font-size: 0.9em;
-`;
-
-const Excerpt = styled.div`
-  line-height: 1.6em;
-  color: rgba(12, 17, 43, 0.8);
-`;
