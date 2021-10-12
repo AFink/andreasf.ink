@@ -53,7 +53,7 @@ const Contact = ({ state }) => {
                 title: state.lang[state.currentLang].home.contact.success.title,
                 text: state.lang[state.currentLang].home.contact.success.text,
                 icon: 'success'
-              })
+            })
 
             setFormData({
                 name: "",
@@ -140,14 +140,20 @@ const Contact = ({ state }) => {
                                         ) : ''}
                                     </div>
                                 </Col>
+
+                                <Col className="col-12">
+                                    <div className="form-check mb-3">
+                                        <input type="checkbox" className={'form-check-input'} id="dsgvo" name="dsgvo" required />
+                                        <label className="form-check-label" htmlFor="dsgvo">{state.lang[state.currentLang].home.contact.form.dsgvo}</label>
+                                    </div>
+                                </Col>
+
                                 <Col className="col-12">
                                     <input type="submit" className="btn btn-primary btn-block w-100" value={state.lang[state.currentLang].home.contact.form.submit} />
                                 </Col>
                             </Row>
-
                         </form>
                     </Col>
-
                 </Row>
             </Container >
         </div >
