@@ -63,7 +63,7 @@ const settings = {
               'archive': '/services'
             },
           ],
-          "url": "https://wp.andreasf-ink.afink.dev/"
+          "url": "https://test.frontity.org/"
         }
       }
     },

@@ -21,9 +21,9 @@ const Item = ({ state, item, libraries, showExcerpt = true, showCategories = tru
 
   return (
     <Col md={4}>
-      <Link link={item.link} className="post rounded text-decoration-none text-white-50 text-center hvr-float w-100 h-100 d-flex flex-column flex-wrap">
+      <Link link={item.link} className={(item.featured_media ? "" : "no_media ") + "post rounded text-decoration-none text-white-50 text-center hvr-float w-100 h-100 d-flex flex-column flex-wrap"}>
         <div className="post-image">
-          <FeaturedMedia id={item.featured_media} margin={false} />
+          <FeaturedMedia id={item.featured_media} margin={false} className="w-100" />
         </div>
         <div className="details p-4 pt-3 bg-primary d-flex flex-column flex-grow-1">
           {showCategories ? <ul className="list-inline mb-0 mb-2">

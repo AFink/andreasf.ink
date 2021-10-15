@@ -23,9 +23,6 @@ const Footer = ({ state }) => {
                 <Row className="text-center align-items-center flex-row-reverse">
                     <Col>
                         <ul className="list-inline list-inline-dots mb-0">
-
-
-
                             {state.theme.footermenu.map(([name, link]) => {
                                 const isCurrentPage = state.router.link === link;
                                 return (
@@ -36,7 +33,6 @@ const Footer = ({ state }) => {
                                     </li>
                                 );
                             })}
-
                         </ul>
                     </Col>
                     <div className="col-lg-auto ms-lg-auto">

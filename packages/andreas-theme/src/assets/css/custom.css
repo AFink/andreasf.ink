@@ -131,7 +131,7 @@ body, html, #root {
     height: auto;
 }
 
-.post .post-image img{
+.post .post-image img, .post.no_media .details {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -139,6 +139,8 @@ body, html, #root {
 .post .details{
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    max-width: 100%;
+    overflow-wrap: break-word;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
@@ -148,4 +150,24 @@ body, html, #root {
 
 .nav-pills .nav-link{
     color: rgb(var(--bs-primary-rgb));
+}
+
+.post-picture{
+    margin-top: 0!important;
+    position: relative;
+}
+
+.post-picture:before {
+    background-color: rgb(var(--bs-primary-rgb));
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.post-picture img {
+    max-height: 440px;
+    width: auto;
 }

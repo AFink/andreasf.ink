@@ -37,7 +37,7 @@ const Theme = ({ state }) => {
       <Global styles={hoverCss} />
       <Global styles={customCss} />
 
-      <div className="page-wrapper">
+      <div className="page-wrapper bg-light">
         <Navigation />
         <Switch>
           <Loading when={data.isFetching} />

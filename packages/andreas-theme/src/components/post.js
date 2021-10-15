@@ -1,127 +1,76 @@
 import { useEffect } from "react";
 import { connect, styled } from "frontity";
-import Container from 'react-bootstrap/Container';
 import Link from "@frontity/components/link";
-import List from "./list";
+
+import Col from "react-bootstrap/Col";
+import Container from 'react-bootstrap/Container';
+import Row from "react-bootstrap/Row";
+
 import FeaturedMedia from "./featured-media";
+import { jsUcfirst } from "@finki70/shufflejs-react/lib/Utils";
+import List from "./list";
+import moment from "moment";
 
-/**
- * The Post component that Mars uses to render any kind of "post type", like
- * posts, pages, attachments, etc.
- *
- * It doesn't receive any prop but the Frontity store, which it receives from
- * {@link connect}. The current Frontity state is used to know which post type
- * should be rendered.
- *
- * @param props - The Frontity store (state, actions, and libraries).
- *
- * @example
- * ```js
- * <Switch>
- *   <Post when={data.isPostType} />
- * </Switch>
- * ```
- *
- * @returns The {@link Post} element rendered.
- */
 const Post = ({ state, actions, libraries }) => {
-  // Get information about the current URL.
   const data = state.source.get(state.router.link);
-  // Get the data of the post.
   const post = state.source[data.type][data.id];
-  // Get the data of the author.
-  const author = state.source.author[post.author];
-  // Get a human readable date.
-  const date = new Date(post.date);
-
-  // Get the html2react component.
   const Html2React = libraries.html2react.Component;
 
-  /**
-   * Once the post has loaded in the DOM, prefetch both the
-   * home posts and the list component so if the user visits
-   * the home page, everything is ready and it loads instantly.
-   */
+  const { items } = state.source.data["all-categories/"];
+
+  const categoryHelper = post.categories.map(c => items.find(i => i.id == c) ? items.find(i => i.id == c) : null).filter(x => x);
+
   useEffect(() => {
     actions.source.fetch("/");
     List.preload();
   }, [actions.source]);
 
-  // Load the post, but only if the data is ready.
   return data.isReady ? (
-    <Container>
-      <div>
-        <Title dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
-
-        {/* Hide author and date on pages */}
-        {!data.isPage && (
-          <div>
-            {author && (
-              <StyledLink link={author.link}>
-                <Author>
-                  By <b>{author.name}</b>
-                </Author>
-              </StyledLink>
-            )}
-            <DateWrapper>
-              {" "}
-              on <b>{date.toDateString()}</b>
-            </DateWrapper>
-          </div>
-        )}
+    <div>
+      <div id="header" className="bg-primary">
+        <Container className="col-xxl-8 px-4 py-5 text-secondary text-center">
+          <Row className="flex-lg-row-reverse align-items-center g-5 pt-5">
+            <Col>
+              <div className="lead text-white-50 mb-5 mb-md-3">
+                <ul className="list-inline list-inline-dots mb-0">
+                  {categoryHelper.map((c, i) => (<li key={c.id} className="list-inline-item">
+                    <span className="badge">
+                      <Link link={c.link} className="text-decoration-none text-white-50">{jsUcfirst(c.name)}</Link>
+                    </span>
+                  </li>))}
+                </ul>
+              </div>
+              <h1 className="display-5 fw-bold lh-1 mb-3 text-white" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+              <p className="badge text-white-50">
+                {moment(post.date).format('LL')}
+              </p>
+            </Col>
+          </Row>
+        </Container >
       </div>
 
-      {/* Look at the settings to see if we should include the featured image */}
-      {state.theme.featured.showOnPost && (
-        <FeaturedMedia id={post.featured_media} />
-      )}
+      <div className="post-picture">
+        <FeaturedMedia id={post.featured_media} margin={false} className="d-block mx-lg-auto img-fluid rounded position-relative" />
+      </div>
 
-      {data.isAttachment ? (
-        // If the post is an attachment, just render the description property,
-        // which already contains the thumbnail.
-        <div dangerouslySetInnerHTML={{ __html: post.description.rendered }} />
-      ) : (
-        // Render the content using the Html2React component so the HTML is
-        // processed by the processors we included in the
-        // libraries.html2react.processors array.
-        <Content>
-          <Html2React html={post.content.rendered} />
-        </Content>
-      )}
-    </Container>
+      <Container>
+        {data.isAttachment ? (
+          <div dangerouslySetInnerHTML={{ __html: post.description.rendered }} />
+        ) : (
+          <Content id="content" className="p-5">
+            <Html2React html={post.content.rendered} />
+          </Content>
+        )}
+      </Container>
+    </div>
   ) : null;
 };
 
 export default connect(Post);
 
-const Title = styled.h1`
-  margin: 0;
-  margin-top: 24px;
-  margin-bottom: 8px;
-  color: rgba(12, 17, 43);
-`;
-
-const StyledLink = styled(Link)`
-  padding: 15px 0;
-`;
-
-const Author = styled.p`
-  color: rgba(12, 17, 43, 0.9);
-  font-size: 0.9em;
-  display: inline;
-`;
-
-const DateWrapper = styled.p`
-  color: rgba(12, 17, 43, 0.9);
-  font-size: 0.9em;
-  display: inline;
-`;
-
-/**
- * This component is the parent of the `content.rendered` HTML. We can use nested
- * selectors to style that HTML.
- */
 const Content = styled.div`
+  font-size: 1.2rem;
+
   color: rgba(12, 17, 43, 0.8);
   word-break: break-word;
 
@@ -158,6 +107,10 @@ const Content = styled.div`
     background-color: rgba(0, 0, 0, 0.1);
     border-left: 4px solid rgba(12, 17, 43);
     padding: 4px 16px;
+  }
+
+  blockquote p {
+    margin-bottom: 0;
   }
 
   a {
