@@ -1,44 +1,45 @@
 {
-  "name": "andreasfink.xyz",
-  "version": "1.0.0",
-  "description": "",
-  "main": "./src/index.js",
+  "name": "andreasf.ink",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "watch": "webpack --watch",
-    "prod": "NODE_ENV=production webpack",
-    "dev": "webpack",
-    "build": "npm run prod"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AFink/andreasfink.xyz.git"
-  },
-  "author": "Andreas Fink <andreas@andreasfink.xyz>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/AFink/andreasfink.xyz/issues"
-  },
-  "homepage": "https://github.com/AFink/andreasfink.xyz#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.3",
-    "@popperjs/core": "^2.9.2",
-    "bootstrap": "^5.0.1",
-    "particles.js": "^2.0.0"
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@popperjs/core": "^2.11.8",
+    "@tsparticles/basic": "^3.7.1",
+    "@tsparticles/engine": "^3.7.1",
+    "@tsparticles/react": "^3.0.0",
+    "bootstrap": "^5.3.3",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.10.7",
+    "react-dom": "^18.3.1",
+    "react-particles": "^2.12.2",
+    "vite-plugin-webfont-dl": "^3.10.3"
   },
   "devDependencies": {
-    "copy-webpack-plugin": "^9.0.0",
-    "css-loader": "^5.2.6",
-    "favicons": "^6.2.2",
-    "favicons-webpack-plugin": "^5.0.2",
-    "file-loader": "^6.2.0",
-    "handlebars": "^4.7.7",
-    "handlebars-loader": "^1.7.1",
-    "html-webpack-plugin": "^5.3.1",
-    "node-sass": "^6.0.0",
-    "sass-loader": "^12.0.0",
-    "style-loader": "^2.0.0",
-    "url-loader": "^4.1.1",
-    "webpack": "^5.38.1",
-    "webpack-cli": "^4.7.0"
+    "@eslint/js": "^9.17.0",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "globals": "^15.14.0",
+    "sass": "^1.83.0",
+    "typescript": "~5.6.2",
+    "typescript-eslint": "^8.18.2",
+    "vite": "^6.0.5",
+    "vite-plugin-svgr": "^4.3.0"
   }
 }
