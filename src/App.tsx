@@ -10,13 +10,11 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram';
 import { faDiscord } from '@fortawesome/free-brands-svg-icons/faDiscord';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter';
 import { faSteam } from '@fortawesome/free-brands-svg-icons/faSteam';
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons/faUserSecret';
 import { faDocker } from '@fortawesome/free-brands-svg-icons/faDocker';
 import { faLastfm } from '@fortawesome/free-brands-svg-icons/faLastfm';
 import { faTwitch } from '@fortawesome/free-brands-svg-icons/faTwitch';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons/faYoutube';
 import { faReddit } from '@fortawesome/free-brands-svg-icons/faReddit';
-import { faTeamspeak } from '@fortawesome/free-brands-svg-icons/faTeamspeak';
 import { faTelegram } from '@fortawesome/free-brands-svg-icons/faTelegram';
 import { faKeybase } from '@fortawesome/free-brands-svg-icons/faKeybase';
 
@@ -30,11 +28,11 @@ const config = {
     "title": "Home - Andreas Fink",
     "brand": "AndreasF.ink",
     "copyright": "Andreas Fink",
-    "replyto": "mail@andreasf.ink",
+    "replyto": "kontakt@andreasf.ink",
     "navbar": [
         {
             "name": "E-Mail",
-            "href": "mailto:mail@andreasf.ink",
+            "href": "mailto:hallo@andreasf.ink",
             "icon": faEnvelope
         },
         {
@@ -54,7 +52,7 @@ const config = {
         },
         {
             "name": "Discord",
-            "href": "https://discord.gg/wgnP5wS",
+            "href": "https://discord.com/users/290893007044083714",
             "icon": faDiscord
         },
         {
@@ -66,11 +64,6 @@ const config = {
             "name": "Steam",
             "href": "http://steamcommunity.com/id/realpantha/",
             "icon": faSteam
-        },
-        {
-            "name": "Tellonym",
-            "href": "https://tellonym.me/xndrxxsfxnk",
-            "icon": faUserSecret
         },
         {
             "name": "Docker",
@@ -96,11 +89,6 @@ const config = {
             "name": "Reddit",
             "href": "https://www.reddit.com/u/RealPanther_",
             "icon": faReddit
-        },
-        {
-            "name": "TeamSpeak",
-            "href": "ts3server://ts.syslul.de",
-            "icon": faTeamspeak
         },
         {
             "name": "Telegram",
