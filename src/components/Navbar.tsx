@@ -90,7 +90,7 @@ export default function Navbar() {
             >
                 <nav
                     id="tkMobileNav"
-                    className={`fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-[40%] margin-x-auto overflow-auto bg-white/95 shadow-lg rounded-lg lg:hidden dark:bg-gray-800/95`}
+                    className={`fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-[40%] max-h-[90%] margin-x-auto flex flex-col overflow-hidden bg-white/95 shadow-lg rounded-lg lg:hidden dark:bg-gray-800/95`}
                     tabIndex={-1}
                     aria-modal="true"
                 >
@@ -125,7 +125,7 @@ export default function Navbar() {
                         {/* END Close Mobile Navigation */}
                     </div>
                     <div className="h-px bg-gray-200/75 dark:bg-gray-700/75" />
-                    <div className="flex px-6 py-5 justify-center">
+                    <div className="flex px-6 py-5 justify-center overflow-y-scroll">
                         <nav className="flex flex-col gap-2">
                             {config.navbar.map((item) => (
                                 <a
