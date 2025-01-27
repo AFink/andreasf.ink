@@ -1,3 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-*: initial;
+    --font-sans: Strait, sans-serif;
+    --font-display: Strait, sans-serif;
+
+    --color-primary: #0a7fee;
+    --color-secondary-dark: #0b0a15;
+    --color-logo-dark: #fefefe;
+    --color-logo-light: #171d2b;
+}
+
+@layer base {
+
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+}

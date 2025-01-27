@@ -26,14 +26,14 @@ export default function Navbar() {
                 </div>
 
                 <div className="flex items-center">
-                    <nav className="hidden gap-4 xl:gap-7 lg:flex">
+                    <nav className="hidden gap-4 xl:gap-6 lg:flex">
                         {config.navbar.map((item) => (
                             <a
                                 key={item.name}
                                 href={item.href}
                                 className="inline-flex items-center p-2 transition-all text-gray-900 hover:text-primary dark:text-white/70"
                             >
-                                <FontAwesomeIcon className="size-5 fill-inherit" icon={item.icon} />
+                                <FontAwesomeIcon className="size-5! fill-inherit" icon={item.icon} />
                             </a>
                         ))}
                     </nav>
@@ -42,7 +42,7 @@ export default function Navbar() {
                         <button
                             onClick={() => setMobileNavOpen(true)}
                             type="button"
-                            className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-semibold leading-5 text-gray-800 hover:border-gray-300 hover:text-gray-900 hover:shadow-sm active:border-gray-200 active:shadow-none dark:border-gray-700 dark:bg-transparent dark:text-gray-300 dark:hover:border-gray-600 dark:hover:text-gray-200 dark:active:border-gray-700"
+                            className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-semibold leading-5 text-gray-800 hover:border-gray-300 hover:text-gray-900 hover:shadow-xs active:border-gray-200 active:shadow-none dark:border-gray-700 dark:bg-transparent dark:text-gray-300 dark:hover:border-gray-600 dark:hover:text-gray-200 dark:active:border-gray-700"
                             aria-label="Mobile Navigation Toggle"
                         >
                             <svg
@@ -75,7 +75,7 @@ export default function Navbar() {
             >
                 <div
                     onClick={() => setMobileNavOpen(false)}
-                    className="fixed inset-0 w-full h-full bg-gray-900/20 backdrop-blur-sm will-change-auto lg:hidden dark:bg-gray-900/80"
+                    className="fixed inset-0 w-full h-full bg-gray-900/20 backdrop-blur-xs will-change-auto lg:hidden dark:bg-gray-900/80"
                 />
             </Transition>
 
@@ -90,7 +90,7 @@ export default function Navbar() {
             >
                 <nav
                     id="tkMobileNav"
-                    className={`fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-[40%] max-h-[90%] margin-x-auto flex flex-col overflow-hidden bg-white/95 shadow-lg rounded-lg lg:hidden dark:bg-gray-800/95`}
+                    className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-[40%] max-h-[90%] margin-x-auto flex flex-col overflow-hidden bg-white/95 shadow-lg rounded-lg lg:hidden dark:bg-gray-800/95"
                     tabIndex={-1}
                     aria-modal="true"
                 >
@@ -110,7 +110,7 @@ export default function Navbar() {
                         <button
                             onClick={() => setMobileNavOpen(false)}
                             type="button"
-                            className="ml-4 inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-semibold leading-5 text-gray-800 hover:border-gray-300 hover:text-gray-900 hover:shadow-sm active:border-gray-200 active:shadow-none dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:border-gray-600 dark:hover:text-gray-200 dark:active:border-gray-700"
+                            className="ml-4 inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-semibold leading-5 text-gray-800 hover:border-gray-300 hover:text-gray-900 hover:shadow-xs active:border-gray-200 active:shadow-none dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:border-gray-600 dark:hover:text-gray-200 dark:active:border-gray-700"
                         >
                             <svg
                                 className="hi-mini hi-x-mark -mx-0.5 inline-block size-5"
