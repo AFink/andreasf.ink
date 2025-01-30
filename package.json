@@ -21,7 +21,7 @@
   "homepage": "https://github.com/AFink/andreasfink.xyz#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
-    "@popperjs/core": "^2.9.2",
+    "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.0.1",
     "particles.js": "^2.0.0"
   },
